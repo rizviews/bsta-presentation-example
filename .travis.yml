@@ -1,0 +1,19 @@
+language: node_js
+branches:
+  only:
+  - master
+  - /feature/.*$/
+ 
+node_js:
+  - 10
+
+services:
+  - docker
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+script:
+  - yarn test
